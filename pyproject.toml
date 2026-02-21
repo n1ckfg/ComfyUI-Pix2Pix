@@ -1,0 +1,15 @@
+[project]
+name = "comfyui-pix2pix"
+description = "Use Pix2Pix and related GANs"
+version = "0.0.1"
+license = { file = "LICENSE" }
+dependencies = ["torch"]
+
+[project.urls]
+Repository = "https://github.com/n1ckfg/ComfyUI-Pix2Pix"
+
+#  Used by Comfy Registry https://comfyregistry.org
+[tool.comfy]
+PublisherId = "n1ckfg"
+DisplayName = "ComfyUI-Pix2Pix"
+Icon = ""
