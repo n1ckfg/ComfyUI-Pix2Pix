@@ -5,6 +5,16 @@ version = "0.0.1"
 license = { file = "LICENSE" }
 dependencies = []
 
+[project.optional-dependencies]
+# Install one of the following depending on your hardware:
+#   CPU only:               pip install onnxruntime
+#   NVIDIA GPU (CUDA):      pip install onnxruntime-gpu
+#   Windows DirectML:       pip install onnxruntime-directml
+# macOS CoreML is included in the base onnxruntime package.
+onnx = ["onnxruntime"]
+onnx-gpu = ["onnxruntime-gpu"]
+onnx-directml = ["onnxruntime-directml"]
+
 [project.urls]
 Repository = "https://github.com/n1ckfg/ComfyUI-Pix2Pix"
 
