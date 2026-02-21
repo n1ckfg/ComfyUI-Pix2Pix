@@ -55,7 +55,7 @@ class Pix2PixLoader:
         return {
             "required": {
                 "image": ("IMAGE",),
-                "model_path": (folder_paths.get_filename_list("pix2pix"),),
+                "model_path": ([f for f in folder_paths.get_filename_list("pix2pix") if f != ".DS_Store"],),
                 # The following four parameters are only used for .pth models.
                 # They are ignored when an .onnx model is selected.
                 "netG": (["unet_256", "unet_128", "resnet_9blocks", "resnet_6blocks"],),
